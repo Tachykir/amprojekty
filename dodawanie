@@ -1,0 +1,20 @@
+#include <iostream>
+#include<stdlib.h>
+using namespace std;
+
+int main(int argc, char* argv[])
+{
+	int a, b, c;
+
+	cout << "Dodawanie dwoch liczb\n";
+	cout << "podaj a ";
+	cin >> a;
+	cout << "Podaj b ";
+	cin >> b;
+
+	c = a + b;
+
+	cout << a << " + " << b << " = " << c << "\n";
+	system("PAUSE");
+	return 0;
+}
