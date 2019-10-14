@@ -1,3 +1,7 @@
+// Delta.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#pragma warning(disable:4996)
 
 #include <iostream>
 #include <stdlib.h>
@@ -6,7 +10,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	int d, a, b, c, x1, x2;
+	double d, a, b, c, x1, x2;
 	char odpowiedz;
 
 
@@ -50,7 +54,7 @@ int main(int argc, char* argv[])
 
 
 
-	cout<<"Czy chcesz obliczyc cos jeszcze? (y/n)";
+	cout<<"Czy chcesz obliczyc cos jeszcze? (y/n)"<< "\n";
 		cin >> odpowiedz;
 	} while (odpowiedz =='y' || odpowiedz =='Y');
 
