@@ -1,0 +1,63 @@
+
+#include <iostream>
+#include <stdlib.h>
+#include <string>
+using namespace std;
+
+int main(int argc, char* argv[])
+{
+	int d, a, b, c, x1, x2;
+	char odpowiedz;
+
+
+	do
+	{
+	
+	
+	cout << "Kalkulator miejsc zerowych"<<"\n";
+
+	cout << "Podaj a: " << "\n";
+	cin >> a;
+
+	cout << "Podaj b: " << "\n";
+	cin>> b;
+
+	cout << "Podaj c: " << "\n";
+	cin >> c;
+
+	d = b * b - 4 * a * c;
+
+	cout << "Otrzymane wyniki to:" << "\n";
+	cout << "Delta wynosi: " << d << "\n";
+
+	if (d > 0)
+	{
+		x1 = (-b - sqrt(d)) / (2 * a);
+		x2 = (-b + sqrt(d)) / (2 * a);
+		cout << "Pierwsze miejsce zerowe funkcji wynosi: " << x1 << "\n";
+		cout << "Drugie miejsce zerowe funkcji wynosi: " << x2 << "\n";
+	}
+	else if (d == 0)
+	{
+		x1 = -b / (2 * a);
+		cout<<"Miejsce zerowe twojej funkcji wynosi: " << x1 << "\n";
+	}
+
+	else
+	{
+		cout << "Delta mniejsza od zera, brak miejsc zerowych" << "\n";
+	}
+
+
+
+	cout<<"Czy chcesz obliczyc cos jeszcze? (y/n)";
+		cin >> odpowiedz;
+	} while (odpowiedz =='y' || odpowiedz =='Y');
+
+
+
+		system("PAUSE");
+		return 0;
+}
+
+
