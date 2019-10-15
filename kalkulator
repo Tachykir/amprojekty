@@ -1,0 +1,126 @@
+
+#include <iostream>
+#include <stdlib.h>
+#include <string>
+using namespace std;
+
+int main(int argc, char* argv[])
+{
+	double d, a, b, c, x1, x2;
+	char odpowiedz, wybor, powrot;
+	do
+	{
+		cout << "Co chcesz obliczyc?\n" << "1. Miejsca zerowe funkcji kwadratowej\n" << "2. Silnie\n" <<"3. Dodawanie\n";
+		cin >> wybor;
+
+		if (wybor == '1')
+		{
+			do
+			{
+
+
+				cout << "Kalkulator miejsc zerowych" << "\n";
+
+				cout << "Podaj a: " << "\n";
+				cin >> a;
+
+				cout << "Podaj b: " << "\n";
+				cin >> b;
+
+				cout << "Podaj c: " << "\n";
+				cin >> c;
+
+				d = b * b - 4 * a * c;
+
+				cout << "Otrzymane wyniki to:" << "\n";
+				cout << "Delta wynosi: " << d << "\n";
+
+				if (d > 0)
+				{
+					x1 = (-b - sqrt(d)) / (2 * a);
+					x2 = (-b + sqrt(d)) / (2 * a);
+					cout << "Pierwsze miejsce zerowe funkcji wynosi: " << x1 << "\n";
+					cout << "Drugie miejsce zerowe funkcji wynosi: " << x2 << "\n";
+				}
+				else if (d == 0)
+				{
+					x1 = -b / (2 * a);
+					cout << "Miejsce zerowe twojej funkcji wynosi: " << x1 << "\n";
+				}
+
+				else
+				{
+					cout << "Delta mniejsza od zera, brak miejsc zerowych" << "\n";
+				}
+
+
+
+				cout << "Czy chcesz obliczyc kolejna funkcje? (y/n)" << "\n";
+				cin >> odpowiedz;
+			} while (odpowiedz == 'y' || odpowiedz == 'Y');
+		}
+		else if (wybor=='2')
+		{
+			do
+			{
+				cout << "Podaj liczbe\n";
+				cin >> a;
+
+				if (a < 0)
+				{
+					cout << "Nie mozna obliczyc silni z liczby ujemnej\n";
+				}
+				else if (a >= 0)
+				{
+					b = 1;
+					c = 1;
+					while (c != a + 1)
+					{
+						b = b * c;
+						c++;
+					}
+
+					cout << "Silnia " << a << "! wynosi " << b <<"\n";
+					
+				}
+				
+				cout << "Czy chcesz obliczyc silnie dla innej liczby? (y/n)";
+				cin >> odpowiedz;
+			} while (odpowiedz == 'y' || odpowiedz == 'Y');
+
+
+			
+		}
+		else if (wybor == '3')
+		{
+			do
+			{
+				cout << "Podaj pierwsza liczbe\n";
+				cin >> a;
+				cout << "Podaj druga liczbe\n";
+				cin >> b;
+
+				c = a + b;
+
+				cout << "Twoj wynik to " << c <<"\n";
+
+				cout << "Czy chcesz wykonac kolejne dodawanie? (y/n)\n";
+					cin >> odpowiedz;
+			} while (odpowiedz == 'y' || odpowiedz == 'Y');
+		}
+
+		else
+		{
+			cout << "Nic nie wybrales!\n";
+		}
+
+
+		cout << "Czy chcesz obliczyc cos jeszcze? (y/n)\n";
+		cin >> powrot;
+	} while (powrot == 'y' || powrot == 'Y');
+
+	system("PAUSE");
+	return 0;
+}
+
+
